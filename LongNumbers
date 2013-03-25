@@ -6,23 +6,10 @@
 using namespase std;
 class LongNumbers
 {
+      protected:
 char * number;
 int length;
-public:
-IntNumbers(char * numb="0")
-{
-length=strlen(numb);
-number=newchar[length];
-strcpy(number,numb);
-} 
-class LongNumbers
-{
-      private:
-       
-        int deg;
-        double * mas;
-        
-      
+
       public:
         LongNumbers();// constructors
         LongNumbers(int deg, double * mas);
@@ -33,4 +20,31 @@ class LongNumbers
         double getmas();
         void setmas(double newmas);
        
-};
+}
+
+LongNumbers
+{
+char * number;
+int length;
+public:
+IntNumbers(char * numb)
+{
+len=strlen(numb);
+number=new char[len];
+strncpy(number,numb,len);//??
+} 
+
+;LongNumbers::LongNumbers()// constructors
+        {
+          deg=new char [100];
+        }
+LongNumbers::LongNumbers(char * newdeg, double * newmas)
+        {
+          int len=strlen(newdeg);
+          deg=new char [deg+1];
+          strncpy(deg,newdeg,len);
+          deg[len+1]=0;
+          deg=newdeg;
+         
+        }
+      
