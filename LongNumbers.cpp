@@ -7,7 +7,7 @@ using namespase std;
 class LongNumbers
 {
       protected:
-char * num;
+char * num;//number
 int len;// length 
 
       public:
@@ -17,9 +17,13 @@ int len;// length
         ~LongNumbers();// destructor
         
         LongNumbers &operator=(const LongNumbers &Object); // Перегрузка =
-        LongNumbers operator+(LongNumbers &); // Сума
-        LongNumbers operator-(LongNumbers &); // Різниця
-        LongNumbers operator*(LongNumbers &); // Множення
+        LongNumbers operator+(LongNumbers &); // Додавання цілих довгих чисел
+        LongNumbers operator-(LongNumbers &); // Віднімання довгих цілих чисел
+        LongNumbers operator*(LongNumbers &); // Множення довгого цілого числа на коротке
+        LongNumbers operator**(LongNumbers &); // Множення довгого цілого числа на довге
+        LongNumbers operator%(LongNumbers &); // Ділення довгого цілого числа на коротке
+        LongNumbers operator%%(LongNumbers &); // Ділення довгого цілого числа на довге
+         
 }
 
 LongNumbers::LongNumbers(int newlen, char * newnum)
