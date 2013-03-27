@@ -15,7 +15,11 @@ int len;// length
         LongNumbers(int newlen, char * newnum);// 
         LongNumbers(const LongNumbers &x);
         ~LongNumbers();// destructor
-       
+        
+        LongNumbers &operator=(const LongNumbers &Object); // Перегрузка =
+        LongNumbers operator+(LongNumbers &); // Сума
+        LongNumbers operator-(LongNumbers &); // Різниця
+        LongNumbers operator*(LongNumbers &); // Множення
 }
 
 LongNumbers::LongNumbers(int newlen, char * newnum)
