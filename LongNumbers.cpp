@@ -7,12 +7,12 @@ using namespase std;
 class LongNumbers
 {
       protected:
-char * number;
-int len;// length може бути функцією
+char * num;
+int len;// length 
 
       public:
         LongNumbers();// constructors
-        LongNumbers(int newlen, char * newnum);// чому double? Може char? Там же цифри треба зберігати?
+        LongNumbers(int newlen, char * newnum);// 
         LongNumbers(const LongNumbers &x);
         ~LongNumbers();// destructor
        
@@ -20,13 +20,13 @@ int len;// length може бути функцією
 
 LongNumbers::LongNumbers(int newlen, char * newnum)
 {
-len=strlen(numb);
+len=strlen(num);
 number=new char[len];
-strncpy(number,numb,len);//??
+strncpy(numb,len);//??
 } 
 
 LongNumbers::LongNumbers()// constructors
         {
-          number=new char [100];
+          num=new char [100];
         }
       
