@@ -21,9 +21,9 @@ int len;// length
         LongNumbers operator+(LongNumbers &); // Додавання цілих довгих чисел
         LongNumbers operator-(LongNumbers &); // Віднімання довгих цілих чисел
         LongNumbers operator*(LongNumbers &); // Множення довгого цілого числа на коротке
-        LongNumbers operator**(LongNumbers &); // Множення довгого цілого числа на довге
+        LongNumbers operator*0(LongNumbers &); // Множення довгого цілого числа на довге
         LongNumbers operator%(LongNumbers &); // Ділення довгого цілого числа на коротке
-        LongNumbers operator%%(LongNumbers &); // Ділення довгого цілого числа на довге
+        LongNumbers operator%0(LongNumbers &); // Ділення довгого цілого числа на довге
         
           // Перегрузка оператора << для вивода
         friend ostream &operator<<(ostream &, LongNumbers &);//дружні оператори
