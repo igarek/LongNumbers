@@ -7,8 +7,8 @@ using namespase std;
 class LongNumbers
 {
       protected:
-char * num;//number
-int len;// length 
+char * num;//number- кількість числ в числі
+int len;// length -довжина 
 
       public:
         LongNumbers();// constructors
@@ -29,39 +29,49 @@ int len;// length
         friend ostream &operator<<(ostream &, LongNumbers &);//дружні оператори
         // Перегрузка оператора >> для ввода масиву
         friend istream &operator>>(istream &, LongNumbers &);//дружні оператори
-         
+        
+        
+        
+         int n;
+        double *x;
+        
+        
+        
 }
 
 LongNumbers::LongNumbers(int newlen, char * newnum)
 {
-len=strlen(num);
-number=new char[len];
-strncpy(numb,len);//??
+       unsigned char i;
+len=newlen;
+number=new char[len+1];
+for(i=0;i<=n;num[i++]=newnam[i]);
 
-    unsigned char i;///////// розбирааааааааю, сделаю
-    len=newlen;
-    num=new char[n+1];
-    for(i=0;i<=n;x[i++]=xx[i]);
+ 
 }
  
-polynom::polynom()
+LongNumbers::LongNumbers()
 {
-    double x[1]={0};
-    polynom::polynom(0,x);
+    char num[1]={0};
+    LongNumbers::LongNumbers(0,num);
 }
  
-polynom::~polynom()
+LongNumbers::LongNumbers
 {
-    delete []x;
+    delete [] num;
 }
  
-double polynom::t()
+LongNumbers::LongNumbers::t()
 {
-    return x[0];
+    return num[0];
 }
-
-LongNumbers::LongNumbers()// constructors
-        {
-          num=new char [100];
-        }
-      
+ 
+ 
+// Перегрузка  оператора =
+LongNumbers&:LongNumbers ::operator=(const LongNumbers &Object)
+{
+    len = Object.lenn;
+          delete []num;
+    num=new char * [len+1];
+    for(int i=0;i<=len;)num[i++]=Object.num[i];
+    return *this;
+}
