@@ -29,14 +29,7 @@ int len;// length -довжина
         friend ostream &operator<<(ostream &, LongNumbers &);//дружні оператори
         // Перегрузка оператора >> для ввода масиву
         friend istream &operator>>(istream &, LongNumbers &);//дружні оператори
-        
-        
-        
-         int n;
-        double *x;
-        
-        
-        
+  
 }
 
 LongNumbers::LongNumbers(int newlen, char * newnum)
