@@ -2,8 +2,9 @@
 #include<conio.h>
 #include<stdlib.h>
 #include<iostream>
-
-using namespase std;
+#include <math.h>
+#include <malloc.h>
+using namespaсe std;
 class LongNumbers
 {
       protected:
@@ -68,7 +69,7 @@ LongNumbers& LongNumbers ::operator=(const LongNumbers &Object)
     for(int i=0;i<=len;)num[i++]=Object.num[i];
     return *this;
 }
-LongNumbers LongNumbers::operator+(LongNumbers &fp1)
+LongNumbers LongNumbers::operator+(LongNumbers &fp1)//перегрузка оператора +
 {
     LongNumbers ret;
     ret=(len>fp1.len)?*this:fp1;
