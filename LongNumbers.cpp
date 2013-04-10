@@ -97,3 +97,4 @@ int main(int argc, char *argv[])
     m2.~ LongNumbers ();
     m3.~ LongNumbers ();
 }
+
