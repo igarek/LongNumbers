@@ -4,7 +4,7 @@
 #include<iostream>
 #include <math.h>
 #include <malloc.h>
-using namespaсe std;
+using namespace  std;
 class LongNumbers
 {
       protected:
