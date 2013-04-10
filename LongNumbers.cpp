@@ -8,8 +8,8 @@ using namespace  std;
 class LongNumbers
 {
       protected:
-char * num;//number- ê³ëüê³ñòü ÷èñë â ÷èñë³
-int len;// length -äîâæèíà 
+char * num;//number- кылькысть чисел
+int len;// length - довжина 
 
       public:
         LongNumbers();// constructors
@@ -18,19 +18,19 @@ int len;// length -äîâæèíà
         ~LongNumbers();// destructor
         double t();
         
-        LongNumbers &operator=(const LongNumbers &Object); // Ïåðåãðóçêà =
-        LongNumbers operator+(LongNumbers &); // Äîäàâàííÿ ö³ëèõ äîâãèõ ÷èñåë
-        LongNumbers operator-(LongNumbers &); // Â³äí³ìàííÿ äîâãèõ ö³ëèõ ÷èñåë
-        LongNumbers operator*(LongNumbers &); // Ìíîæåííÿ äîâãîãî ö³ëîãî ÷èñëà íà êîðîòêå
-        //LongNumbers operator*0(LongNumbers &); // Ìíîæåííÿ äîâãîãî ö³ëîãî ÷èñëà íà äîâãå
-        LongNumbers operator%(LongNumbers &); // Ä³ëåííÿ äîâãîãî ö³ëîãî ÷èñëà íà êîðîòêå
-        //LongNumbers operator%0(LongNumbers &); // Ä³ëåííÿ äîâãîãî ö³ëîãî ÷èñëà íà äîâãå
+        LongNumbers &operator=(const LongNumbers &Object); // Перегрузка оператора =
+        LongNumbers operator+(LongNumbers &); // Додавання довгих чисел 
+        LongNumbers operator-(LongNumbers &); // Віднімання довгих чисел 
+        LongNumbers operator*(LongNumbers &); // Множення цілого довгого числа на коротке
+        //LongNumbers operator*0(LongNumbers &); // Множення цілого довгого числа на довге
+        LongNumbers operator%(LongNumbers &); // Ділення цілого довгого числа на коротке
+        //LongNumbers operator%0(LongNumbers &); // Ділення цілого довгого числа на довге
         
-          // Ïåðåãðóçêà îïåðàòîðà << äëÿ âèâîäà
-        friend ostream &operator<<(ostream &, LongNumbers &);//äðóæí³ îïåðàòîðè
-        // Ïåðåãðóçêà îïåðàòîðà >> äëÿ ââîäà ìàñèâó
-        friend istream &operator>>(istream &, LongNumbers &);//äðóæí³ îïåðàòîðè
-  
+          // Перегрузка оператора << для виводу
+        friend ostream &operator<<(ostream &, LongNumbers &);//дружні оператори
+        // Перегрузка оператора >> для вводу масиву
+        friend istream &operator>>(istream &, LongNumbers &);//дружні оператори
+        
 };
 
 LongNumbers::LongNumbers(int newlen, char *newnum)
@@ -60,7 +60,7 @@ double LongNumbers::t()
 }
  
  
-// Ïåðåãðóçêà îïåðàòîðà =
+// Перегрузка оператора =
 LongNumbers& LongNumbers ::operator=(const LongNumbers &Object)
 {
     len = Object.len;
@@ -69,7 +69,7 @@ LongNumbers& LongNumbers ::operator=(const LongNumbers &Object)
     for(int i=0;i<=len;)num[i++]=Object.num[i];
     return *this;
 }
-LongNumbers LongNumbers::operator+(LongNumbers &fp1)//ïåðåãðóçêà îïåðàòîðà +
+LongNumbers LongNumbers::operator+(LongNumbers &fp1)//Перегрузка оператора +
 {
     LongNumbers ret;
     ret=(len>fp1.len)?*this:fp1;
@@ -80,7 +80,7 @@ LongNumbers LongNumbers::operator+(LongNumbers &fp1)//ïåðåãðóçêà îï�
     return ret;
 }
 
-// Ïåðåãðóçêà îïåðàòîðà >>
+// Перегрузка оператора >>
 istream &operator>>(istream &fi,LongNumbers &fp)
 {
     cout<<"len=";
@@ -98,7 +98,7 @@ istream &operator>>(istream &fi,LongNumbers &fp)
     return fi;
 }
  
-// Ïåðåãðóçêà îïåðàòîðà <<
+// Перегрузка оператора <<
 ostream &operator<<(ostream &fo, LongNumbers  &fp)
 {
  
@@ -109,10 +109,10 @@ ostream &operator<<(ostream &fo, LongNumbers  &fp)
 int main(int argc, char *argv[])
 {
     
-    char num1[]={6,3,8};
-    char num2[]={9,4,1};
-    LongNumbers m3(3,num1);
-    LongNumbers m1(3,num2);
+    char num1[]={6,3,3,4,5,6,7,8,9,0};
+    char num2[]={9,4,1,3,4,5,6,7,8,1};
+    LongNumbers m3(10,num1);
+    LongNumbers m1(10,num2);
     cout<<"Pershe chislo:"<<endl;
     cout<<m1<<endl;
      LongNumbers m2(3,num2);
