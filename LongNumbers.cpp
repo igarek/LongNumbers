@@ -120,21 +120,35 @@ ostream &operator<<(ostream &fo, LongNumbers  &fp)
     return fo;
 }
 
+
+
 int main(int argc, char *argv[])
 {
     
-    char num1[]={6,3,3,4,5,6,7,8,9,0};
-    char num2[]={9,4,1,3,4,5,6,7,8,1};
-    LongNumbers m3(10,num1);
-    LongNumbers m1(10,num2);
+    char num1[]={6,3,3,4,5,6,7,8,9,0,7};
+    char num2[]={9,4,1,3,4,5,6,7,8,1,6};
+    
+    LongNumbers m3(11,num1);
+    
+    LongNumbers m1(10,num1);
+    
     cout<<"Pershe chislo:"<<endl;
     cout<<m1<<endl;
-     LongNumbers m2(3,num2);
+    
+     LongNumbers m2(10,num2);
+     
     cout<<"Druge chislo:"<<endl;
     cout<<m2<<endl;
+    
     m3=m1+m2;
     cout<<endl<<"Suma m1 and m2:"<< endl<<m3<<endl;
  getch();
-  
+
+    m1.~LongNumbers();
+    m2.~LongNumbers();
+    m3.~LongNumbers();
+    
+system("PAUSE");
+    return EXIT_SUCCESS;
 }
 
