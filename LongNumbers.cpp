@@ -80,6 +80,20 @@ LongNumbers LongNumbers::operator+(LongNumbers &fp1)//Перегрузка оп�
     return ret;
 }
 
+// Перегрузка оператора -
+LongNumbers LongNumbers::operator-(LongNumbers &fp1)
+{
+    LongNumbers ret;
+    int i;
+    ret=(len>fp1.len)?*this:fp1;
+    if(fp1.len>len) for(i=len;i<=ret.len;ret.num[i++]=-ret.num[i]);
+    int minind=(len>fp1.len)?fp1.len:len;
+ 
+    for(i=0;i<=minind;ret.num[i++]=num[i]-fp1.num[i]);
+    return ret;
+ 
+}
+
 // Перегрузка оператора >>
 istream &operator>>(istream &fi,LongNumbers &fp)
 {
